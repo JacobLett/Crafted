@@ -1,0 +1,86 @@
+
+<div class="footerProfile">
+	<div class="inner">
+		%%Panel.CraftedProfile%%
+	</div><!-- .inner -->
+</div><!-- .footerProfile -->
+
+
+<div class="footer">
+    <div class="inner">
+		
+        %%Panel.SideNewsletterBox%%
+
+        <div class="footer-main">
+            <div class="inner">
+                <div class="footer-columns grid">
+                    <div class="grid__item one-fifth">%%Panel.FooterCategoryList%%</div>
+                    <div class="grid__item one-fifth">%%Panel.CraftedFooterLinks1%%</div>
+                    <div class="grid__item one-fifth"><h4>Pages</h4>%%Panel.PagesMenu%%</div>
+                    <div class="grid__item one-fifth">%%Panel.BlogRecentPosts%%</div>
+					<div class="grid__item one-fifth">%%Panel.SocialLinks%%</div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="inner">
+					<div class="copyright">&copy; %%GLOBAL_Year%% %%GLOBAL_StoreName%% %%GLOBAL_StoreAddress%% | %%GLOBAL_StorePhoneNumber%% | %%SNIPPET_SitemapLink%% </div>
+		            
+
+					%%Panel.CraftedPaymentOptions%%
+					
+					<div class="meta">
+						This <span class="themeDesigner"><a href="http://bootstrapcreative.com/" title="Bigcommerce theme design">Bigcommerce theme design was handcrafted by Bootstrap Creative</a></span>
+						<span class="powered-by">%%GLOBAL_PoweredBy%%</span>
+					</div><!-- .meta -->
+
+                %%GLOBAL_DebugDetails%%
+            </div>
+        </div>
+
+
+		
+    </div>
+</div>
+
+%%GLOBAL_DesignModeHTML%%
+%%GLOBAL_QueryList%%
+%%GLOBAL_DesignModeScriptTag%%
+%%GLOBAL_LiveChatFooterCode%%
+%%GLOBAL_OptimizerTrackingScript%%
+%%GLOBAL_OptimizerConversionScript%%
+%%GLOBAL_OptimizerSetCookieScript%%
+%%GLOBAL_FooterScripts%%
+%%SNIPPET_FastCartThickBoxJs%%
+
+
+
+<script type="text/javascript" charset="utf-8">
+//	$('.page').css('visibility','visible');
+</script>
+
+<script type="text/javascript">
+	// This code loads a file of non essential code after the entire document has loaded
+	function downloadJSAtOnload() {
+	var element = document.createElement("script");
+	
+	// DEV
+	//element.src = "%%GLOBAL_TPL_PATH%%/js/crafted.js";
+	
+	// PROD
+	element.src = "%%GLOBAL_TPL_PATH%%/js/build/crafted.min.js";
+	
+	document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
+</script>
+
+
+%%Panel.CraftedSettings%%
+%%Panel.CraftedPopUp%%

@@ -1,0 +1,95 @@
+%%Panel.DOCTYPE%%
+<!--[if lt IE 8]> 	<html class="no-js lt-ie8 lt-ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if lt IE 9]>    <html class="no-js lt-ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if lt IE 10]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]>	<!--> <html class="no-js modern" lang="en"> <!--<![endif]-->
+
+<head>
+
+	%%GLOBAL_OptimizerControlScript%%
+
+	<title>%%Page.WindowTitle%%</title>
+
+	<meta charset="%%GLOBAL_CharacterSet%%">
+	<meta name="description" content="%%Page.MetaDescription%%" />
+	<meta name="keywords" content="%%Page.MetaKeywords%%" />
+	%%GLOBAL_AdditionalMetaTags%%
+	%%Page.CanonicalLink%%
+	%%Page.Robots%%
+	%%GLOBAL_HeadFonts%%
+	<link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		(function(){
+			// this happens before external dependencies (and dom ready) to reduce page flicker
+			var node, i;
+			for (i = window.document.childNodes.length; i--;) {
+				node = window.document.childNodes[i];
+				if (node.nodeName == 'HTML') {
+					node.className += ' javascript';
+				}
+			}
+		})();
+	//]]>
+	</script>
+
+	%%GLOBAL_Stylesheets%%
+
+	<!-- Tell the browsers about our RSS feeds -->
+	%%GLOBAL_HeadRSSLinks%%
+
+	<!-- Include visitor tracking code (if any) -->
+	%%GLOBAL_TrackingCode%%
+
+	%%GLOBAL_DesignModeStyleSheet%%
+
+	%%GLOBAL_HeaderImageStyle%%
+
+	<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    
+	<script type="text/javascript" charset="utf-8" src="%%GLOBAL_CdnAppPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" charset="utf-8" src="%%GLOBAL_CdnAppPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" charset="utf-8" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8" src="%%GLOBAL_CdnAppPath%%/javascript/viewport.js?%%GLOBAL_JSCacheToken%%"></script>
+
+	<!-- Theme bespoke js -->
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/matchMedia.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/common.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/jquery.autobox.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/init.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/jquery.uniform.min.js"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/main.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script  type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/quicksearch.js"></script>
+	
+	<!-- Theme Crafted js added in footer panel -->
+	<script type="text/javascript" charset="utf-8" src="%%GLOBAL_TPL_PATH%%/js/owl-carousel/owl.carousel.min.js?%%GLOBAL_JSCacheToken%%"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		document.write('<style type="text/css">.page{visibility:hidden;}</style>');
+	</script>
+	
+
+
+
+	<script>
+	//<![CDATA[
+	config.ShopPath = '%%GLOBAL_ShopPath%%';
+	config.AppPath = ''; // BIG-8939: Deprecated, do not use.
+	config.FastCart = %%GLOBAL_FastCart%%;
+	var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+	var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+	//]]>
+	</script>
+	%%GLOBAL_AdditionalScriptTags%%
+	%%GLOBAL_RTLStyles%%
+
+
+	<!-- prevents no console error in IE8-->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" charset="utf-8"> if (!window.console) console = {log: function() {}}; </script>
+	<![endif]-->
+
+</head>

@@ -1,0 +1,45 @@
+<div itemscope itemtype="http://schema.org/Product">
+	<meta itemprop="name" content="%%GLOBAL_ProductName%%">
+	<meta itemprop="description" content="%%Page.MetaDescription%%">
+	<meta itemprop="image" content="%%GLOBAL_ThumbImageURL%%">
+
+	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+		<meta itemprop="worstRating" content="1">
+		<meta itemprop="bestRating" content="5">
+		<meta itemprop="ratingValue" content="%%GLOBAL_Rating%%">
+		<meta itemprop="reviewCount" content="%%GLOBAL_ProductNumReviews%%">
+	</div>
+
+	<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+		<meta itemprop="price" content="" id="metaPrice">
+		<meta itemprop="priceCurrency" content="USD" />
+		<link itemprop="availability" href="http://schema.org/InStock" />
+	</div>
+
+	<div itemscope itemtype="http://schema.org/Organization">
+		<meta itemprop="name" content="%%GLOBAL_BrandName%%">
+	</div>
+</div>
+
+<div id="priceValue" class="hide">%%GLOBAL_ProductPrice%%</div><!-- #priceValue -->
+
+<script type="text/javascript" charset="utf-8">
+$( document ).ready(function() {
+
+	// Hides the homepage feture box if no slides are added
+	if (!$('#priceValue .SalePrice').length) { // implies zero or empty
+	    console.log('price value 1');
+		var priceMeta = $('#priceValue').text();
+		console.log(priceMeta);
+		$('#priceValue').attr('content', priceMeta);
+		
+	  } else {
+		// If on sale
+		console.log('price value 2');
+		var priceMeta = $('#priceValue .SalePrice').text();
+		console.log(priceMeta);
+		$('#priceValue').attr('content', priceMeta);
+	}
+});
+
+</script>

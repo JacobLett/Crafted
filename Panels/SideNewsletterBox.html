@@ -1,0 +1,33 @@
+%%GLOBAL_NewsletterBoxControlScript%%
+<div class="newsletter-subscription" id="SideNewsletterBox">
+    <div class="inner">
+        <div class="grid">
+            <div class="grid__item one-half">
+                %%GLOBAL_NewsletterHeaderOptimizerScriptTag%%
+                <h4>Sign Up & Save 10% <small>Off Your First Order</small></h4>
+            </div>
+            <div class="grid__item one-half">
+                %%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+                <form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" id="subscribe_form" class="subscribe_form" name="subscribe_form">
+                    <input type="hidden" name="action" value="subscribe" />
+                    <div class="grid">
+                        <div class="grid__item two-fifths hide">
+                            <label for="nl_first_name">%%LNG_HC_name%%</label>
+                            <input class="Textbox autobox" value="Name" id="nl_first_name" name="nl_first_name" type="text" />
+                        </div>
+                        <div class="grid__item two-thirds">
+                            <label for="nl_email">%%LNG_HC_email%%</label>
+                            <input class="Textbox autobox" value="Email" id="nl_email" name="nl_email" type="email" />
+                        </div>
+                        <div class="grid__item one-third center-text">
+                            %%GLOBAL_NewsletterButtonOptimizerScriptTag%%
+                            <input value="Sign Up" class="btn" type="submit" />
+                            %%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+%%Panel.NewsletterJavaScript%%

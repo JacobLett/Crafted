@@ -1,0 +1,21 @@
+<li>
+	<div class="ProductImage">
+		%%GLOBAL_ProductThumb%%
+	</div>
+	<div class="ProductDetails">
+		<input type="hidden" name="ProductDetailsID" class="ProductDetailsID" value="%%GLOBAL_ProductId%%" />
+		<a href="%%GLOBAL_ProductLink%%" class="pname">%%GLOBAL_ProductName%%</a>
+		<em class="p-price">%%GLOBAL_ProductPrice%%</em>
+		<span class="Rating Rating%%GLOBAL_ProductRating%%">
+            <img src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_ProductRating%%.png" alt="" style="%%GLOBAL_HideProductRating%%" />
+        </span>
+	</div>
+	
+
+
+	<div class="AddToWishlistLink" id="SideProductAddToWishList">
+		<a href="/wishlist.php?action=add&amp;product_id=%%GLOBAL_ProductId%%&amp;variation_id=" title="Add to Wishlist"><i class="fa fa-lg fa-heart"></i></a>
+	</div><!-- .AddToWishlistLink -->
+
+
+</li>

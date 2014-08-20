@@ -1,0 +1,54 @@
+
+
+    %%GLOBAL_OptimizerLinkScript%%
+<div class="TopMenu">
+    <div class="inner">
+        <ul style="display:%%GLOBAL_HidePurchasingOptions%%">
+            <li class="js-drawermenu-store-phone-container" %%GLOBAL_ShowStorePhoneNumber%%>
+                <div class="phoneIcon"><span class="numberLead"><i class="fa fa-phone"></i> Call Us</span> <span class="js-drawermenu-store-phone">%%GLOBAL_StorePhoneNumber%%</span></div>
+            </li>
+
+
+            <li style="display:%%GLOBAL_HideAccountOptions%%" class="First hide">
+                <a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>
+            </li>
+
+
+            <li style="display:%%GLOBAL_HideAccountOptions%%">
+                <div class="acctOptions"><span class="name">Hi <a href="%%GLOBAL_ShopPath%%/account.php">%%GLOBAL_CurrentCustomerFirstName%%</a></span> <span class="loginOut">%%GLOBAL_LoginOrLogoutText%%</span></div>
+            </li>
+            %%SNIPPET_TopMenuGiftCertificates%%
+            <li style="display:%%GLOBAL_HideWishlist%%" class="wishLink">
+                <a href="%%GLOBAL_ShopPath%%/wishlist.php">Wish Lists</a>
+            </li>
+			
+			<li style="%%GLOBAL_LiveChatCodeEnabled%%" class="HeaderLiveChat">
+                %%GLOBAL_LiveChatCode%%
+            </li>
+
+
+            <li class="js-drawermenu-currency-converter hide">
+                <div class="currency-converter">
+                    <p>%%GLOBAL_AllPricesAreInCurrency%%</p>
+                    %%Panel.SideCurrencySelector%%
+                </div>
+            </li>
+
+            <li class="last CartLink js-drawermenu-cart" style="display:%%GLOBAL_HideCartOptions%%">
+                <a href="%%GLOBAL_ShopPathNormal%%/cart.php" title="%%LNG_ViewCart%%"><i class="fa fa-shopping-cart"></i> <div class="cartStatus"></div> <span class="cartCounter">%%GLOBAL_CartItems%%</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
