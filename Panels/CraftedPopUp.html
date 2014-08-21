@@ -19,9 +19,7 @@
 		if ( !$("html").hasClass("lt-ie9") && width >= 800 && craftedShowPopUp == true  ) {
 					
 					$('#craftedPopUp').append($('<a href="'+craftedPopUpLink+'"><img src="'+craftedPopUpIMG+'" /></a>'));
-					
 
-				
 					
 							/*!
 							 * jQuery Cookie Plugin v1.4.1
@@ -103,14 +101,23 @@
 													callbackOnShow : function(){
 										           },
 										           callbackOnClose : function(){
+														
+														
 										           },
 											});
 
 											$("a#craftedFancyBox").fancybox().trigger('click');
 
 
-											   $.cookie('craftedModal', '1', { expires: 30, path: '/' });
-
+											$.cookie('craftedModal', '1', { expires: 30, path: '/' });
+											
+											$("head").append($("<link rel='stylesheet' href='../Styles/craftedPopUp.css' type='text/css' media='screen' id='craftedPopUp' />"));
+											
+											$( "#fancy_close" ).click(function() {
+											  	$('#craftedPopUp').remove();
+											});
+											
+											
 
 									 }, 5000)
 
@@ -130,38 +137,6 @@
 	});
 	// end window load
 </script>
-<style type="text/css" media="screen">
-	div#fancy_outer {
-	position: fixed !important;
-	top: 20px !important;
-	bottom: 20px !important;
-	left: 0 !important;
-	right: 0 !important;
-	overflow-y: auto;
-	overflow-x: hidden;
-	margin: 0 auto !important;
-	max-width: 60% !important;
-	width: auto !important;
-	padding: 0 !important;
-	z-index: 110 !important;
-	/* height of image +10px for padding*/
-	height: inherit!important;
-	}
-	#fancy_outer img {width:100%;display: block;height:auto;}
-	
-	div#fancy_div {
-	background: #FFF;
-	color: #FFF;
-	height: inherit!important;
-	width: inherit!important;
-	z-index: 100;
-	margin: 10px;
-	padding: 10px;
-	}
-	div#fancy_inner {
-	position: relative;
-	height: inherit!important;
-	width: inherit!important;
-	background: none;
-	}
-</style>
+
+
+
