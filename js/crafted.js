@@ -333,10 +333,18 @@ if (!$("html").hasClass("lt-ie9")) {
 //changes blog post list heading to follow suit
 $(".footer #BlogRecentPosts h2").replaceWith('<h4><a href="/blog/">Blog</a></h4>')
 
-$( ".CurrencyChooser .BlockContent" ).hide();
-$( ".CurrencyChooser .selected-currency" ).click(function() {
-  $( ".CurrencyChooser .BlockContent" ).toggle();
-});
+// Currency Chooser toggle
+	//  $( ".CurrencyChooser .BlockContent" ).hide();
+	//  	$( ".CurrencyChooser .selected-currency" ).click(function() {
+  	//		$( ".CurrencyChooser .BlockContent" ).toggle();
+	// });
+
+
+
+
+
+
+
 
 // ==========================================================================
 // HOMEPAGE - Crafted
