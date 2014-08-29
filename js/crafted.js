@@ -112,12 +112,27 @@ if (!$("html").hasClass("lt-ie9")) {
 		var width = $(window).width();
 		if (width >= 490) {
 
-			$('#frmWishList button[alt], .AddToWishlistLink button[alt]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
+			$('#frmWishList button[alt], .AddToWishlistLink button[alt] ').qtip({ // Grab all elements with a non-blank data-tooltip attr.
 				style: { 
 				      classes: 'qtip-light', // Inherit from preset style
 				   },
 			    content: {
 			        attr: 'alt' // Tell qTip2 to look inside this attr for its content
+			    },
+			     position: {
+			        my: 'bottom center',  // Position my top left...
+			        at: 'top center', // at the bottom right of...
+			        //target: [10, 10]
+			    }
+			});
+			
+			
+			$('.AddToWishlistLink a[title]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
+				style: { 
+				      classes: 'qtip-light', // Inherit from preset style
+				   },
+			    content: {
+			        attr: 'title' // Tell qTip2 to look inside this attr for its content
 			    },
 			     position: {
 			        my: 'bottom center',  // Position my top left...

@@ -768,7 +768,7 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .Content .ProductList .ProductImage,.brand-img,.ProductList .ProductImage,#ProductDetails .ProductThumbImage{background-color:#ffffff;}
 #fastCartContainer .ProductList li,#home #fastCartContainer .ProductList li{border:inherit;padding:inherit;}
 .fastCartSummaryBox{background-color:#ffffff;}
-.ProductList .AddToWishlistLink{position:absolute;top:8px;left:10px;}
+.ProductList .AddToWishlistLink{position:absolute;top:10px;left:12px;}
 .ProductList .AddToWishlistLink a{position:absolute;top:0;left:0;font-weight:bold;cursor:pointer;color:#ffffff !important;background:none;border:0;height:30px;width:30px;}
 .ProductList .AddToWishlistLink i{font-size:16px;}
 .ProductList .AddToWishlistLink a:hover i{font-size:20px;}
@@ -833,7 +833,7 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .ProductList .p-price,.cart .ProductPrice{font-family:'Niconne','Times New Roman','georgia','serif';font-size:24px;font-weight:normal;margin:0;padding-right:5px;}
 .ProductList .p-price .RetailPriceValue,.ProductPrice strike{font-family:'Open Sans','Arial','sans-serif';font-size:14px;font-weight:normal;color:#e2e2e2;}
 .ProductList .btn{height:30px;line-height:30px;padding:0 .8em;}
-.saleTag{position:absolute;top:40px;left:7px;background-color:#7cd3cd;color:#ffffff;padding:0 1em 0 .5em;font-size:20px;line-height:26px;background:transparent url('../images/sale-price-tag.svg?736') no-repeat right center;font-family:'Niconne','Times New Roman','georgia','serif';letter-spacing:1px;}
+.saleTag{position:absolute;top:40px;left:7px;background-color:#7cd3cd;color:#ffffff;padding:0 1em 0 .5em;font-size:20px;line-height:26px;background:transparent url('../images/sale-price-tag.svg?737') no-repeat right center;font-family:'Niconne','Times New Roman','georgia','serif';letter-spacing:1px;}
 .productPage .ProductList .p-price .saleTag{left:-1px;}
 .productPage .ProductThumbImage .saleTag{top:40px;left:0;}
 .SoldOutTag{position:absolute;top:50%;left:0;width:100%;background-color:white;background:rgba(255, 255, 255, 0.8);font-weight:bold;border-top:2px solid white;border-bottom:2px solid white;line-height:30px;color:#757575;text-transform:uppercase;text-align:center;}
@@ -845,7 +845,7 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .SortBox{color:#f75f31;}
 .SortBox label,.SearchSorting label{color:#757575;}
 .QuickViewBtn:hover i:before,.wishlist-button a:hover i:before{font-size:20px;line-height:1.1em;}
-.ProductList li .QuickViewBtn,.ProductList .list-item .QuickViewBtn{background:none!important;display:inline-block !important;position:absolute!important;color:white!important;top:6px!important;right:3px!important;left:inherit!important;-moz-transition:none;-webkit-transition:none;-o-transition:color 0 ease-in;transition:none;padding:0;height:30px;width:30px;}
+.ProductList li .QuickViewBtn,.ProductList .list-item .QuickViewBtn{background:none!important;display:inline-block !important;position:absolute!important;color:white!important;top:6px!important;right:0px!important;left:inherit!important;-moz-transition:none;-webkit-transition:none;-o-transition:color 0 ease-in;transition:none;padding:0;height:30px;width:30px;}
 .productPage .ProductPrice,.QuickViewModal .ProductPrice{font-size:34px;}
 .SocialConnect ul{margin-left:0;}
 .SocialConnect li{display:inline-block;float:none;margin-right:10px;width:auto;list-style-type:none;}
@@ -855,7 +855,7 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 #featuresList h4{padding:0;}
 .featuresList{padding-left:20px;list-style:none;}
 .featuresList li{margin-bottom:10px;font-weight:600;}
-.featuresList li:before{content:"\f00c";color:#eaf1c4;margin:0 5px 0 -25px;}
+.featuresList li:before{content:"\f00c";color:#fca88f;margin:0 5px 0 -25px;}
 .SocialConnect .icon-facebook:before{content:"\f09a";}
 .SocialConnect .icon-twitter:before{content:"\f099";}
 .SocialConnect .icon-pinterest:before{content:"\f0d2";}
