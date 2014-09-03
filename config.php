@@ -22,8 +22,8 @@ $GLOBALS['TPL_CFG']['PhysicalName'] = basename(__DIR__);
 $GLOBALS['TPL_CFG']['Version'] = '1.0';
 
 $GLOBALS['TPL_CFG']['Premium'] = array(
-    // price in cents / $170
-    'price' => 17000,
+    // price in cents / $165
+    'price' => 16500,
     'currency' => 'usd',
     'partner' => '',
 );
@@ -35,7 +35,7 @@ $GLOBALS['TPL_CFG']['Partner'] = array(
 );
 
 // Make the theme editable with the Style Editor.
-$GLOBALS['TPL_CFG']['StyleEditable'] = true;
+$GLOBALS['TPL_CFG']['StyleEditable'] = false;
 
 $GLOBALS['TPL_CFG']['Responsive'] = true;
 
@@ -65,7 +65,7 @@ $GLOBALS['TPL_CFG']['FeaturesTextArray'] = array(
 $GLOBALS['TPL_CFG']['DevicesText'] = "This theme has been tested and approved for use on Chrome, Safari, Firefox, Opera, IE8+, Apple iOS, Android and Windows Mobile Devices";
 
 // Theme details/description; supports HTML.
-$GLOBALS['TPL_CFG']['DescriptionHtml'] = "<p>The Crafted theme is designed for makers of handmade products. Showcase your latest designs and let new visitors get to know you right from the homepage. The prominent search box will give your visitors quick access to find your products. Also since Bigcommerce tracks every search keyword, you will have valuable insight into what your customers want to buy. Your customers will feel right at home with the subtle design cues similar to what is found on Etsy or Pinterest. Social media buttons will encourage them to share your products and blog posts with their friends. If you want to build your brand and sell more of your handmade products this theme is crafted just for you.</p><p><b>Simulates Visual Merchandising — </b>A picture can say a thousand words. This fact has been used in brick-and-mortar retail stores with product displays, signage, and print catalogs. Crafted is designed to encourage browsing throughout your store and introduce offers they may not have seen otherwise.</p><p><b>Develops a Personal Brand — </b>The products you sell are as unique as you are. Tell the story behind your work with a photo and text description shown throughout your online store. Your social profile links will be shown underneath to increase your followers.</p><p><b>Encourages Sharing — </b>Statistics show 44% of ecommerce shares are to Pinterest and pins generate a high average order value compared to other social network. Pinterest sharing buttons are strategically placed throughout the Crafted theme to encourage visitors to share your products with their friends.</p>";
+$GLOBALS['TPL_CFG']['DescriptionHtml'] = "<p>The Crafted theme is designed for makers of handmade products. Showcase your latest designs and let new visitors get to know you right from the homepage. The prominent search box will give your visitors quick access to find your products. Also since Bigcommerce tracks every search keyword, you will have valuable insight into what your customers want to buy. Your customers will feel right at home with the subtle design cues similar to what is found on Etsy or Pinterest. Social media buttons will encourage them to share your products and blog posts with their friends. If you want to build your brand and sell more of your handmade products this theme is crafted just for you.</p>";
 
 
 // Recommended dimensions of a logo when it's displayed in the header of this template
@@ -116,9 +116,9 @@ $GLOBALS['TPL_CFG']['ConfigDefaults']['ProductImagesZoomImage_width']       = 12
 $GLOBALS['TPL_CFG']['ConfigDefaults']['ProductImagesZoomImage_height']      = 1280;
 $GLOBALS['TPL_CFG']['ConfigDefaults']['ProductImagesZoomImage_timeChanged'] = time();
 
-$GLOBALS['TPL_CFG']['ConfigDefaults']['CustomersAlsoViewedCount'] = 5
+$GLOBALS['TPL_CFG']['ConfigDefaults']['CustomersAlsoViewedCount'] = 5;
 $GLOBALS['TPL_CFG']['ConfigDefaults']['HomeFeaturedProducts']     = 5;
-$GLOBALS['TPL_CFG']['ConfigDefaults']['HomeNewProducts']          = 5
+$GLOBALS['TPL_CFG']['ConfigDefaults']['HomeNewProducts']          = 5;
 $GLOBALS['TPL_CFG']['ConfigDefaults']['CategoryProductsPerPage']  = 20;
 
 $GLOBALS['TPL_CFG']['ConfigDefaults']['enableMobileTemplate'] = !$GLOBALS['TPL_CFG']['Responsive'];
@@ -148,6 +148,15 @@ $GLOBALS['TPL_CFG']['Stylesheets'] = array(
         'stylesheet' => 'Styles/slide-show.css',
     ),
     array(
+        'stylesheet' => 'Styles/base-forms.css',
+    ),
+    array(
+        'stylesheet' => 'Styles/crafted.min.css',
+    ),
+    array(
+        'stylesheet' => 'Styles/light.css',
+    ),
+    array(
         'stylesheet' => 'Styles/styles-slide-show.css',
     ),
     array(
@@ -170,6 +179,9 @@ $GLOBALS['TPL_CFG']['Stylesheets'] = array(
     ),
     array(
         'stylesheet' => 'Styles/responsive.css',
+    ),
+    array(
+        'stylesheet' => 'Styles/theme.css',
     ),
 );
 
