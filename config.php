@@ -189,4 +189,4 @@ $GLOBALS['TPL_CFG']['Stylesheets'] = array(
 $GLOBALS['TPL_CFG']['DemoStore'] = "http://crafted-demo.mybigcommerce.com";
 
 // Is theme enabled? (i.e. visible in Theme Store)
-$GLOBALS['TPL_CFG']['Enabled'] = true;
+$GLOBALS['TPL_CFG']['Enabled'] = false;
