@@ -28,16 +28,16 @@ $( document ).ready(function() {
 
 	// Hides the homepage feture box if no slides are added
 	if (!$('#priceValue .SalePrice').length) { // implies zero or empty
-	    console.log('price value 1');
+	    //console.log('price value 1');
 		var priceMeta = $('#priceValue').text();
-		console.log(priceMeta);
+		//console.log(priceMeta);
 		$('#priceValue').attr('content', priceMeta);
 		
 	  } else {
 		// If on sale
-		console.log('price value 2');
+		//console.log('price value 2');
 		var priceMeta = $('#priceValue .SalePrice').text();
-		console.log(priceMeta);
+		//console.log(priceMeta);
 		$('#priceValue').attr('content', priceMeta);
 	}
 });

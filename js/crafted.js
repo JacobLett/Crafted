@@ -616,7 +616,7 @@ if (!$("html").hasClass("lt-ie9")) {
 	// Adds a Sold Out or out of stock tag to the product listing and product page
 	if(!$('.ProductList .list-item .ProductActionAdd[style="display:none;"], .ProductList li .ProductActionAdd[style="display:none;"], .ProductList .list-item .ProductActionAdd[style="display: none;"], .ProductList li .ProductActionAdd[style="display: none;"]').length == 0)
 	{
-		console.log('out of stock :hidden')
+		//console.log('out of stock :hidden')
 		$('.ProductList .list-item .ProductActionAdd[style="display:none;"], .ProductList li .ProductActionAdd[style="display:none;"], .ProductList .list-item .ProductActionAdd[style="display: none;"], .ProductList li .ProductActionAdd[style="display: none;"]').parent().find('.ProductImage a').append( "<span class='SoldOutTag'>Sold Out</span>" );
 		
 	}

@@ -1,7 +1,7 @@
 /**
  * jQuery iframe click tracking plugin
  * Version 1.3 (2014-05-16)
- * Copyright © 2014 Vincent Paré, www.finalclap.com
+ * Copyright ï¿½ 2014 Vincent Parï¿½, www.finalclap.com
  */
 (function($){
 	// Registering new tracking handler
@@ -81,7 +81,7 @@
 				try{
 					$('body').on('click', 'form', function(e){ e.stopPropagation(); });
 				} catch(ex){
-					console.log("[iframeTracker] Please update jQuery to 1.7 or newer. (exception: " + ex.message + ")");
+					//console.log("[iframeTracker] Please update jQuery to 1.7 or newer. (exception: " + ex.message + ")");
 				}
 			}
 		},
