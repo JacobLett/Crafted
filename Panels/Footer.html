@@ -1,3 +1,11 @@
+
+<div class="footerProfile">
+	<div class="inner">
+		%%Panel.CraftedProfile%%
+	</div><!-- .inner -->
+</div><!-- .footerProfile -->
+
+
 <div class="footer">
     <div class="inner">
 		
@@ -6,10 +14,11 @@
         <div class="footer-main">
             <div class="inner">
                 <div class="footer-columns grid">
-                    <div class="grid__item one-quarter">%%Panel.FooterCategoryList%%</div>
-                    <div class="grid__item one-quarter"><h4>Pages</h4>%%Panel.PagesMenu%%</div>
-                    <div class="grid__item one-quarter">%%Panel.BlogRecentPosts%%</div>
-					<div class="grid__item one-quarter">%%Panel.SocialLinks%%</div>
+                    <div class="grid__item one-fifth">%%Panel.FooterCategoryList%%</div>
+                    <div class="grid__item one-fifth">%%Panel.CraftedFooterLinks1%%</div>
+                    <div class="grid__item one-fifth"><h4>Pages</h4>%%Panel.PagesMenu%%</div>
+                    <div class="grid__item one-fifth">%%Panel.BlogRecentPosts%%</div>
+					<div class="grid__item one-fifth">%%Panel.SocialLinks%%</div>
                     
                 </div>
             </div>
@@ -58,10 +67,10 @@
 	var element = document.createElement("script");
 	
 	// DEV
-	element.src = "%%GLOBAL_TPL_PATH%%/js/crafted.js";
+	//element.src = "%%GLOBAL_TPL_PATH%%/js/crafted.js";
 	
 	// PROD
-	//element.src = "%%GLOBAL_TPL_PATH%%/js/build/crafted.min.js";
+	element.src = "%%GLOBAL_TPL_PATH%%/js/build/crafted.min.js";
 	
 	document.body.appendChild(element);
 	}
