@@ -906,7 +906,6 @@ transform: translateX(100%);
 	#search_query::-moz-placeholder:before { content: "\f002 "; font-family: "FontAwesome", FontAwesome;font-style: normal;}
 	#search_query:-ms-input-placeholder:before { content: "\f002 "; font-family: "FontAwesome", FontAwesome;font-style: normal; }
 	.header-secondary {background-color:#fff!important;}
-
 }
 
 /* ==========================================================================
@@ -938,4 +937,101 @@ CROSS BROWSER FIXES - Crafted
 /* No opacity for you */
 .lt-ie9 .footer .powered-by a, .paymentLogos img  { filter: progid:DXImageTransform.Microsoft.Alpha(enabled = false);filter: none;}
 .lt-ie9 .ProductList .ProductDetails a {height:auto;}
+
+
+/* ==========================================================================
+STYLE PATCH - Crafted - April 12, 2015
+========================================================================== */
+
+/* Fast cart style fixes */
+#fastCartContainer .ProductList li .ProductImage a img {position:static!important;}
+#fastCartContainer .ProductList li {width:23%!important;}
+.crafted .CartContents .productAttributes tbody tr, .crafted .CartContents .productAttributes tr , .crafted .CartContents tr {background:inherit!important;}
+
+/*removes main nav submenu black icon and changes it to a font icon*/
+.crafted .PageMenu li ul li a.hasSub{position:static!important;background:none!important;}
+.crafted .PageMenu li ul li a.hasSub:after{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.crafted .PageMenu li ul li a.hasSub:after{content:"\f054";position:absolute;right:5px;}
+
+/* removes submenu border*/
+#SideCategoryList li ul li ul, #SideCategoryList .sf-menu li ul li ul {border:none!important;}
+.preorder {font-family: 'Open Sans', 'Arial', 'sans-serif';font-size: 14px;font-weight: normal;color: #e2e2e2;}
+
+/* Add to wishlist and quick view btn drop shadow */
+.ProductList .AddToWishlistLink i, .ProductList .QuickViewBtn i {text-shadow:2px 1px 3px rgba(0,0,0, 0.3);}
+
+/* Adds shadow to logo text hover */
+#LogoContainer h1 a:hover {text-shadow: 2px 2px 2px #CCC;}
+
+/* footer grid padding */
+.crafted .footer-main .grid__item {padding-right: 15px;}
+
+/* Usp move down*/
+.usp {margin-top: 15px;}
+
+/* Adds intstagram social icon support */
+.footer-main .SocialConnect .icon-instagram:before {content: "\f16d";}
+
+/* main nav font size - adds more horizontal room for text */
+.header .sf-menu a {font-size: 16px!important;}
+
+/* Shorten search bar */
+.searchDesktop #SearchForm {width: 30%;}
+.PageMenu .CategoryList {width: 60%;}
+#SearchForm .Button {width: 30%;}
+#SearchForm input {width: 70%;}
+.PageMenu .CategoryList {width: 65%;}
+
+/* product page showed 5 products and now it cuts the last one to show 4 */
+.productPage .ProductList li:nth-child(5) {display: none;}
+
+/* after order is complete share order was running over text */
+.finishorder #share-product {margin-top:20px;}
+
+/* password info box overlaps */
+.createAccount .PasswordRequirements {height:70px;}
+
+@media screen and (max-width: 768px)  {
+	.header-logo{width:100%;text-align:center;display: block;}
+	.PageMenu #SideCategoryList {
+	  float: none;
+	  width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px)  {
+	/* Centers logo on mobile    */
+	#Header > .inner{width:100%;}
+	
+	.crafted .header-logo{width:100%;text-align:center;display: block;}
+	
+	.PageMenu #SideCategoryList {
+	  float: none;
+	  width: 100%;
+	}
+	
+	/* Adjust checkout table on mobile*/
+	.CartContents table,.CartContents thead,.CartContents tfoot,.CartContents tbody,.CartContents th,.CartContents td,.CartContents tr{display:block;}
+	.CartContents tr.Even{border-bottom:1px solid #ccc;}
+	.CartContents tr{overflow:hidden;}
+	.CartContents td{/* Behave like a "row" */
+	border:none;position:relative;padding-left:50%;}
+	.CartContents td:before{/* Now like a table header */
+	position:absolute;/* Top/left values mimic padding */
+	top:6px;left:6px;width:45%;padding-right:10px;white-space:nowrap;}
+	.CartContents .CartItemQuantity{float:left;}
+	.CartContents .CartItemTotalPrice,.CartContents .ProductName,.CartContents .CartItemQuantity{margin:0!important;padding:0!important;}
+	.CartContents .productAttributes td{display:inline;}
+	.CartContents .CartThumb,.CartContents .CartItemIndividualPrice{display:block!important;}
+	.cart .CartCode > .CouponCode,.cart .CartCode > .GiftCertificate{width:100%;}
+	.checkoutExpress #bottom_payment_button{width:100% !important;}
+	.checkout .footer-main .inner{padding:0;}
+	
+	/* Hidees quicksearch on Mobile */
+	#QuickSearch {display: none!important;}
+}
+/* End MOBILE styles */
+
+
+
 
