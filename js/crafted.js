@@ -398,21 +398,26 @@ $(".footer #BlogRecentPosts h2").replaceWith('<h4><a href="/blog/">Blog</a></h4>
 	});
 
 	
+
+
+
+
 	// Begin Carousels and sliders
 	// http://owlgraphic.com/owlcarousel/
+
+		var autoplayValue  = GLOBAL_SwapFrequency;
+
 		  $("#featureSlide").owlCarousel({
 		      	navigation : true, // Show next and prev buttons
 		      	slideSpeed : 600,
 		      	paginationSpeed : 400,
-				// Change to any integrer for example autoPlay : 5000 to play every 5 seconds. If you set autoPlay: true default speed will be 5 seconds.
-				autoPlay: 5000,
-				rewindSpeed: 1,
+				autoPlay: autoplayValue,
+				rewindSpeed: 400,
 				stopOnHover: true,
 		      	singleItem:true
 		  });
 
-
-
+		console.log('autoplay'+ autoplayValue);
 
 
 
