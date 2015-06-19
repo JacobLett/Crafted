@@ -46,10 +46,12 @@ $( document ).ready(function() {
 	
 	if (typeof craftedProfileActive == true) {
 	    // variable is true
-		$('.profile').show();
+		$('.profile, .bioBanner').show();
 	} else {
 		//console.log(craftedNewsletterSubmit);
-		$('.profile').hide();
+		$('.profile, .bioBanner').hide();
+		
+		
 	}
 	
 	
