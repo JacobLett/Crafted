@@ -19,11 +19,11 @@ $GLOBALS['TPL_CFG']['International'] = false;
 $GLOBALS['TPL_CFG']['PhysicalName'] = basename(__DIR__);
 
 // The version of the template, as it will appear in the control panel
-$GLOBALS['TPL_CFG']['Version'] = '1.0';
+$GLOBALS['TPL_CFG']['Version'] = '2.0';
 
 $GLOBALS['TPL_CFG']['Premium'] = array(
     // price in cents / $170
-    'price' => 17000,
+    'price' => 18500,
     'currency' => 'usd',
     'partner' => '',
 );
