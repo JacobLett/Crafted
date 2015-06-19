@@ -931,6 +931,9 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .lt-ie9 .selector span{visibility:hidden;}
 .lt-ie9 .footer .powered-by a,.paymentLogos img{filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);filter:none;}
 .lt-ie9 .ProductList .ProductDetails a{height:auto;}
+/* 
+V2 Updates 
+*/
 #fastCartContainer .ProductList li .ProductImage a img{position:static!important;}
 #fastCartContainer .ProductList li{width:23%!important;}
 .crafted .CartContents .productAttributes tbody tr,.crafted .CartContents .productAttributes tr,.crafted .CartContents tr{background:inherit!important;}
@@ -943,6 +946,11 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 #LogoContainer h1 a:hover{text-shadow:2px 2px 2px #CCC;}
 .crafted .footer-main .grid__item{padding-right:15px;}
 .usp{margin-top:15px;}
+/* adds support for fourth column */
+.one-fourth {width: 24.3%;}
+@media screen and (max-width: 768px)  {.footer-main .footer-columns .grid__item.one-fourth {width: 48%;}}
+/* footer grid padding */
+.crafted .footer-main .grid__item {padding-right: 15px;}
 .footer-main .SocialConnect .icon-instagram:before{content:"\f16d";}
 .header .sf-menu a{font-size:16px!important;}
 .searchDesktop #SearchForm{width:30%;}
