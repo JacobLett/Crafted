@@ -44,6 +44,16 @@ $( document ).ready(function() {
 	}
 	
 	
+	if (typeof craftedProfileActive == true) {
+	    // variable is true
+		$('.profile').show();
+	} else {
+		//console.log(craftedNewsletterSubmit);
+		$('.profile').hide();
+	}
+	
+	
+	
 	if (typeof craftedNewsletterHeadline === 'undefined') {
 	    // variable is undefined
 	} else {
