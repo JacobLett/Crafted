@@ -710,7 +710,8 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .footer .copyright,.footer .paymentLogos{margin-bottom:10px;}
 .footer .meta{margin:10px 0;}
 .feature{overflow:hidden;position:relative;margin-bottom:20px;}
-.slideWrap{float:left;width:74%;}
+/* SlideWrap */
+.feature.profileActive .slideWrap {float:left;width:74%;}
 .slideWrap .slide-text{margin-bottom:20px;display:block;}
 .slideWrap .owl-buttons{position:absolute;top:40%;width:100%;}
 .slideWrap .owl-next{position:absolute;right:0;}
@@ -947,8 +948,9 @@ V2 Updates
 .crafted .footer-main .grid__item{padding-right:15px;}
 .usp{margin-top:15px;}
 /* adds support for fourth column */
-.one-fourth {width: 24.3%;}
+.grid__item.one-fourth {width: 24.3%;}
 @media screen and (max-width: 768px)  {.footer-main .footer-columns .grid__item.one-fourth {width: 48%;}}
+@media screen and (max-width: 600px)  {.footer-main .footer-columns .grid__item.one-fourth {width: 100%;}}
 /* footer grid padding */
 .crafted .footer-main .grid__item {padding-right: 15px;}
 .footer-main .SocialConnect .icon-instagram:before{content:"\f16d";}

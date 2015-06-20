@@ -43,15 +43,36 @@ $( document ).ready(function() {
 		$('#subscribe_form .btn').attr('value',craftedNewsletterSubmit);
 	}
 	
-	
-	if (typeof craftedProfileActive == true) {
+	// Hides and shows the profile box and banner
+	if ( craftedProfileActive === true) {
 	    // variable is true
+		//console.log(craftedProfileActive);
 		$('.profile, .bioBanner').show();
+		$('#home .feature').addClass('profileActive');
+		
+		//	Restructures the homepage tile banner
+			var homeBannerLink = $(".banner_home_page_top a").attr( "href" );
+			var categoryBannerLink = $(".banner_category_page_top a").attr( "href" );
+			var brandBannerLink = $(".banner_brand_page_top a").attr( "href" );
+			var searchBannerLink = $(".banner_search_page_top a").attr( "href" );
+			$(".banner_home_page_top a, .banner_category_page_top a, .banner_brands_page_top a, .banner_search_page_top a").replaceWith(function(){
+			        return $("<span class=cta>" + $(this).html() + "</span>");
+			});
+			$(".banner_home_page_top h1, .banner_category_page_top h1, .banner_brands_page_top h1, .banner_search_page_top h1").replaceWith(function(){
+		       return $("<span class=title>" + $(this).html() + "</span>");
+			});
+
+			$(".banner_home_page_top").wrap( '<a href=' + homeBannerLink + '></a>' );
+			$(".banner_category_page_top").wrap( '<a href=' + categoryBannerLink + '></a>' );
+			$(".banner_brand_page_top").wrap( '<a href=' + brandBannerLink + '></a>' );
+			$(".banner_search_page_top").wrap( '<a href=' + searchBannerLink + '></a>' );
+		
+		
+		
+		
 	} else {
-		//console.log(craftedNewsletterSubmit);
+		//console.log(craftedProfileActive);
 		$('.profile, .bioBanner').hide();
-		
-		
 	}
 	
 	
@@ -279,6 +300,17 @@ if (!$("html").hasClass("lt-ie9")) {
 		// $('.ProductList .ProductImage img')
 		// 
 		
+		
+		// when the window is resized do this
+		$(window).resize(function () {
+
+			// wait for the scrolling to stop
+			 setTimeout(function () {
+
+					// Resets the product list images to center
+					// $('.ProductList .ProductImage img').centerImage();
+			  }, 1000)
+		});
 	
 		
 }
@@ -585,22 +617,7 @@ $(".footer #BlogRecentPosts h2").replaceWith('<h4><a href="/blog/">Blog</a></h4>
 	$('.slideText').height(maxHslide).width(maxWslide);
 	
 	
-//	Restructures the homepage tile banner
-//	var homeBannerLink = $(".banner_home_page_top a").attr( "href" );
-//	var categoryBannerLink = $(".banner_category_page_top a").attr( "href" );
-//	var brandBannerLink = $(".banner_brand_page_top a").attr( "href" );
-//	var searchBannerLink = $(".banner_search_page_top a").attr( "href" );
-//	$(".banner_home_page_top a, .banner_category_page_top a, .banner_brands_page_top a, .banner_search_page_top a").replaceWith(function(){
-//	        return $("<span class=cta>" + $(this).html() + "</span>");
-//	});
-//	$(".banner_home_page_top h1, .banner_category_page_top h1, .banner_brands_page_top h1, .banner_search_page_top h1").replaceWith(function(){
-//        return $("<span class=title>" + $(this).html() + "</span>");
-//	});
-	
-//	$(".banner_home_page_top").wrap( '<a href=' + homeBannerLink + '></a>' );
-//	$(".banner_category_page_top").wrap( '<a href=' + categoryBannerLink + '></a>' );
-//	$(".banner_brand_page_top").wrap( '<a href=' + brandBannerLink + '></a>' );
-//	$(".banner_search_page_top").wrap( '<a href=' + searchBannerLink + '></a>' );
+
 	
 	
 // Blocks script from running on ie8 and lower
@@ -762,11 +779,6 @@ $(window).resize(function () {
 				if ($(this).width() > maxWslide) { maxWslide = $(this).width() };
 			});
 			$('.slideText').height(maxHslide).width(maxWslide);
-			
-			// Resets the product list images to center
-			// $('.ProductList .ProductImage img').centerImage();
-			
-			
 
 	  }, 1000)
 	
