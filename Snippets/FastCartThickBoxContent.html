@@ -42,8 +42,12 @@
 		$( document ).ready(function() {
 		    if (!$("html").hasClass("lt-ie9")) {
 				$( '.fastCartBottom .ProductList' ).ready(function() {
-				    console.log( "ready!" );
-					$('.fastCartBottom .ProductList .ProductImage img').centerImage();
+				    //console.log( "ready!" );
+					if ( craftedImageCrop === true) {
+						$('.fastCartBottom .ProductList .ProductImage img').centerImage();
+					}
+					
+					
 				});
 			}
 			// no ie

@@ -634,7 +634,7 @@ hr{margin:20px 0;padding:0;height:1px;background-color:#e2e2e2;border-width:1px 
 .TopMenu .CartLink{margin-left:2em;}
 .TopMenu .CartLink a{color:#f75f31;font-size:16px;}
 .TopMenu a:hover{color:#fca88f;}
-.TopMenu .CartLink a .cartCounter{font-size:12px;color:#e2e2e2;}
+.TopMenu .CartLink a .cartCounter{font-size:12px;}
 .header .sf-menu,.header .sf-menu *{margin:0;padding:0;list-style:none;}
 .header .sf-menu li{position:relative;}
 .header .sf-menu ul{position:absolute;display:none;top:100%;left:0;z-index:99;}
@@ -947,6 +947,15 @@ V2 Updates
 #LogoContainer h1 a:hover{text-shadow:2px 2px 2px #CCC;}
 .crafted .footer-main .grid__item{padding-right:15px;}
 .usp{margin-top:15px;}
+/* Center image function turned on*/
+.ProductList .list-item .ProductImage.crop a, .ProductList .ProductImage.crop a {height:170px!important;}
+.productPage .ProductList .ProductImage.crop a {height:100px!important;}
+.crafted .ProductList .ProductImage.crop img, .crafted #ProductDetails .ProductThumbImage.crop img {
+line-height: 1.5em;
+height: auto!important;
+width: 100%!important;
+max-height:inherit;
+}
 /* adds support for fourth column */
 .grid__item.one-fourth {width: 24.3%;}
 @media screen and (max-width: 768px)  {.footer-main .footer-columns .grid__item.one-fourth {width: 48%;}}
@@ -954,12 +963,32 @@ V2 Updates
 /* footer grid padding */
 .crafted .footer-main .grid__item {padding-right: 15px;}
 .footer-main .SocialConnect .icon-instagram:before{content:"\f16d";}
-.header .sf-menu a{font-size:16px!important;}
+/* Pages and categories in top menu */
+.header .PageMenu.both #SideCategoryList {width:auto;}
+/* Smaller search box */
+.PageMenu.both .searchDesktop #SearchForm { width: 20%;}
+.PageMenu.both #SearchForm input {width: 72%;}
+.PageMenu.both #SearchForm .Button { width: 30%; }
+@media screen and (max-width: 768px)  {
+.header .PageMenu.both #SideCategoryList , .header .PageMenu.both #SideCategoryList ul {width:100%!important;float:none;}
+.header .PageMenu.both #SideCategoryList ul ul {display: none;}
+}
 .searchDesktop #SearchForm{width:30%;}
 .PageMenu .CategoryList{width:60%;}
 #SearchForm .Button{width:30%;}
 #SearchForm input{width:70%;}
 .PageMenu .CategoryList{width:65%;}
+/* When adding product categories under a main category -shop now- display child pages */
+.crafted .footer-columns .CategoryList .sfHover ul {position:relative;left:0;}
+.crafted .footer-columns .CategoryList .sf-with-ul.first {display: none;}
+.crafted .footer-columns .CategoryList li ul {
+  display: block !important;
+visibility: visible!important;
+position:relative;
+top:0;
+}
+.crafted .footer-columns .CategoryList li ul li ul {padding-left:10px!important;}
+/*end*/
 .productPage .ProductList li:nth-child(5){display:none;}
 .finishorder #share-product{margin-top:20px;}
 .createAccount .PasswordRequirements{height:70px;}
