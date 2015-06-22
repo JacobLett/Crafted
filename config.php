@@ -40,6 +40,7 @@ $GLOBALS['TPL_CFG']['StyleEditable'] = true;
 $GLOBALS['TPL_CFG']['Responsive'] = true;
 
 $GLOBALS['TPL_CFG']['FeaturesTextArray'] = array(
+	"Now with Style Editor support to allow you to change theme colors",
 	"Responsive design so your store works across desktops, tablets, and mobile devices",
 	"Prominent search box to help visitors find products and help you see what products people are looking for that you may be missing from your inventory",
 	"Email newsletter signup in footer to help you build an email list",
