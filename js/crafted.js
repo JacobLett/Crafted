@@ -68,9 +68,11 @@ $( document ).ready(function() {
 			$(".banner_search_page_top").wrap( '<a href=' + searchBannerLink + '></a>' );
 			
 			
-			if ( $('#home .bioBanner .banner').children().length == 0 ) {
+			if ( $('#home .banner_home_page_top').children().length == 0 ) {
 			    // div has no other tags inside it
 				$("#home .banner").append( '<a href="http://bootstrapcreative.com/crafted-theme-documentation/#doc9">Add a banner</a>' );
+			} else {
+				 $('#home .banner_home_page_top').hide().appendTo('#home .bioBanner .banner').show();
 			}
 			
 
@@ -457,7 +459,7 @@ if ($("#SideCurrencySelector").length){
 	  			$( ".CurrencyChooser .BlockContent" ).toggle();
 		 });
  } else {
-	console.log('currency selector not activated');
+	//console.log('currency selector not activated');
 }
 
 
