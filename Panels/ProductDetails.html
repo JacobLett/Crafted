@@ -23,7 +23,7 @@ var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
 //Don't enable Cloud Zoom (product image zoom) on touch device
 //Mouseenter/Mouseover events are not ideal for touch devices
 //for more info search for this code in /script/main.js
-if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)){
+if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)) {
     var ShowImageZoomer = false;
 } else {
     var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
@@ -32,13 +32,11 @@ if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)){
 var productId = %%GLOBAL_ProductId%%;
 //]]></script>
 %%Discount.FreeShippingEligibility%%
-<div class="Block Moveable Panel PrimaryProductDetails no-ptop" id="ProductDetails">
+<div class="Block Moveable Panel PrimaryProductDetails no-ptop" id="ProductDetails" itemscope itemtype="http://schema.org/Product">
+	
     <div class="BlockContent">
         %%GLOBAL_ProductDetailFlashMessages%%
 
-
-
-		
 		
         <!-- left-content -->
         <div class="left-content">
@@ -72,18 +70,18 @@ var productId = %%GLOBAL_ProductId%%;
 			            %%GLOBAL_FacebookLikeButtonBelow%%
 				    </div>
 				
-				
-                    <div class="Value" style="display: %%GLOBAL_HideBrandLink%%">
-                        <h4 class="BrandName"><a  href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></h4>
-                    </div>
-                    %%GLOBAL_ProductNameOptimizerScriptTag%%
-                    <h1>%%GLOBAL_ProductName%%</h1>
-                    %%GLOBAL_ProductNameOptimizerNoScriptTag%%
+					<div class="Value" itemprop="brand" itemscope itemtype="http://schema.org/Brand" style="display: %%GLOBAL_HideBrandLink%%">
+                      <h4 class="BrandName"><a itemprop="url" href="%%GLOBAL_BrandLink%%"><span itemprop="name">%%GLOBAL_BrandName%%</span></a></h4>
+                  </div>
+
+                    <h1 itemprop="name">%%GLOBAL_ProductName%%</h1>
+
                 </div>
                 <div class="DetailRow" style="display: %%GLOBAL_HideRating%%">
                     <div class="Value">
                         <span>
-                            <img  src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.png" alt="" />
+							<meta itemprop="ratingValue" content="%%GLOBAL_Rating%%">
+                            <img src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.png" alt="" />
                             <span style="display:%%GLOBAL_HideReviewLink%%">
                                 <a href="#ProductReviews" onclick="%%GLOBAL_ReviewLinkOnClick%%">
                                     %%GLOBAL_ReviewLinkText%%
@@ -92,23 +90,20 @@ var productId = %%GLOBAL_ProductId%%;
                         </span>
                     </div>
                 </div>
-                <div class="DetailRow PriceRow p-price" style="%%GLOBAL_HidePrice%%">
+                <div class="DetailRow PriceRow p-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="%%GLOBAL_HidePrice%%">
                     <div class="Value">
-                        <span class="ProductPrice retail-product-price">%%GLOBAL_RetailPrice%%</span>
-                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span>
+                        <span class="ProductPrice RetailPrice">%%GLOBAL_RetailPrice%%</span>
+                        <meta itemprop="priceCurrency" content="%%GLOBAL_CurrentCurrencyCode%%">
+                        <span class="ProductPrice VariationProductPrice" itemprop="price">%%GLOBAL_ProductPrice%%</span>
 		                <span class="s-price">
 		                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
 		                </span>
-                    </div>
+				    </div>
+
                 </div>
 
             </div>
 			
-
-			
-
-		
-		
 		
             %%GLOBAL_FacebookLikeButtonAbove%%
 
@@ -131,17 +126,8 @@ var productId = %%GLOBAL_ProductId%%;
         <div class="clear"></div>
 		
 		
-		
-		
-		
-		
-		
 		<div class="grid">
             <div class="grid__item one-third">
-				
-				
-				
-
 				
                	 %%Panel.SideProductRelated%%
 			
@@ -174,58 +160,5 @@ var productId = %%GLOBAL_ProductId%%;
 			</div>
         </div>
 
-		
-
-
     </div>
 </div>
-
-
-
-
-
-<div itemscope itemtype="http://schema.org/Product">
-	<meta itemprop="name" content="%%GLOBAL_ProductName%%">
-	<meta itemprop="description" content="%%Page.MetaDescription%%">
-	<meta itemprop="image" content="%%GLOBAL_ThumbImageURL%%">
-
-	<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-		<meta itemprop="worstRating" content="1">
-		<meta itemprop="bestRating" content="5">
-		<meta itemprop="ratingValue" content="%%GLOBAL_Rating%%">
-		<meta itemprop="reviewCount" content="%%GLOBAL_ProductNumReviews%%">
-	</div>
-
-	<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-		<meta itemprop="price" content="" id="metaPrice">
-		<meta itemprop="priceCurrency" content="USD" />
-		<link itemprop="availability" href="http://schema.org/InStock" />
-	</div>
-
-	<div itemscope itemtype="http://schema.org/Organization">
-		<meta itemprop="name" content="%%GLOBAL_BrandName%%">
-	</div>
-</div>
-
-<div id="priceValue" class="hide">%%GLOBAL_ProductPrice%%</div><!-- #priceValue -->
-
-<script type="text/javascript" charset="utf-8">
-$( document ).ready(function() {
-
-	// Hides the homepage feture box if no slides are added
-	if (!$('#priceValue .SalePrice').length) { // implies zero or empty
-	    //console.log('price value 1');
-		var priceMeta = $('#priceValue').text();
-		//console.log(priceMeta);
-		$('#metaPrice').attr('content', priceMeta);
-		
-	  } else {
-		// If on sale
-		//console.log('price value 2');
-		var priceMeta = $('#priceValue .SalePrice').text();
-		//console.log(priceMeta);
-		$('#metaPrice').attr('content', priceMeta);
-	}
-});
-
-</script>

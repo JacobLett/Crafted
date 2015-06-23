@@ -7,27 +7,19 @@
 	<div class="ProductDetailsGrid ProductAddToCart">
 
 		<!-- details grid -->
-		<div class="detailsGrid">
-			
+
 		<div class="DetailRow ProductSKU" style="display: %%GLOBAL_HideSKU%%">
 			<div class="Label">%%LNG_SKU%%:</div>
 			<div class="Value">
-				<span class="VariationProductSKU">
+				<span class="VariationProductSKU" itemprop="sku">
 					%%GLOBAL_SKU%%
 				</span>
 			</div>
 		</div>
 
-		<div class="DetailRow" style="%%GLOBAL_HideVendorDetails%%">
-			<div class="Label">%%LNG_Vendor%%:</div>
-			<div class="Value">
-				%%GLOBAL_VendorName%%
-			</div>
-		</div>
-
 		<div class="DetailRow" style="display: %%GLOBAL_HideCondition%%">
 			<div class="Label">%%LNG_Condition%%:</div>
-			<div class="Value">
+			<div class="Value" itemprop="itemCondition">
 				%%GLOBAL_ProductCondition%%
 			</div>
 		</div>
@@ -35,7 +27,7 @@
 		<div class="DetailRow" style="display: %%GLOBAL_HideWeight%%">
 			<div class="Label">%%LNG_Weight%%:</div>
 			<div class="Value">
-				<span class="VariationProductWeight">
+				<span class="VariationProductWeight" itemprop="weight">
 					%%GLOBAL_ProductWeight%%
 				</span>
 			</div>
@@ -86,7 +78,6 @@
 		</div>
 
 		<!-- details grid -->
-	</div><!-- .detailsGrid -->
 
 		%%SNIPPET_ProductFieldsList%%
 
@@ -119,20 +110,15 @@
 			</div>
 
 			<div class="BulkDiscount DetailRow" style="display: %%GLOBAL_DisplayAdd%%">
-				%%GLOBAL_AddToCartButtonOptimizerScriptTag%%
-					<input type="submit" class="btn add-to-cart AddCartButton" value="%%LNG_ProductAddToCartLink%%" />
-				%%GLOBAL_AddToCartButtonOptimizerNoScriptTag%%
+                <input type="submit" class="btn add-to-cart AddCartButton" value="%%LNG_ProductAddToCartLink%%" />
 			</div>
 
-
+			<!-- Add to Wishlist -->
 			<div style="display:%%GLOBAL_HideWishlist%%" id="SideProductAddToWishList" class="Block Moveable Panel AddToWishlistLink">
-                
-				%%GLOBAL_HidePurchasingOptions%%<button type="submit" class="btn alt wishTrigger" value="%%LNG_AddToWishList%%" alt="%%LNG_AddToWishList%%"><i class="fa fa-lg fa-heart Add to Wishlist"></i></button>%%GLOBAL_HideWishlist%%
-
+                %%GLOBAL_HidePurchasingOptions%%<input value="%%LNG_AddToWishList%%" type="button" class="btn alt wishTrigger" title="%%LNG_AddToWishList%%" />%%GLOBAL_HideWishlist%%
 			</div>
 
-
-
+			<!-- //Custom Add to Wishlist -->
 		</div><!-- addto -->
 	</div>
 </form>
@@ -146,15 +132,11 @@
 			<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
 			<input type="hidden" name="variation_id" value="" class="WishListVariationId"/>
 			<input type="submit" class="wishlist-button" value="%%LNG_AddToWishList%%" alt="%%LNG_AddToWishList%%" />
-			
-			
 		</form>
 	</div>
 </div>
 
 <!-- //Custom Add to Wishlist -->
-
-
 
 %%GLOBAL_ProductBulkDiscountThickBox%%
 
