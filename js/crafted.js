@@ -466,6 +466,8 @@ if ($("#SideCurrencySelector").length){
 // ==========================================================================
 // HOMEPAGE - Crafted
 // ==========================================================================
+// homepage check
+if ($('body#home').length) {
 	
 
 	// Hides the homepage feature box if no slides are added
@@ -665,6 +667,7 @@ if ($("#SideCurrencySelector").length){
 	$('.slideText').height(maxHslide).width(maxWslide);
 	
 	
+}	//end homepage check
 
 	
 	
@@ -700,12 +703,13 @@ if (!$("html").hasClass("lt-ie9")) {
 		$('.ProductList .SalePrice').append( "<span class='saleTag'>Sale</span>" );
 	  }
 	
+	/*
 	// Checks to see if it is not on sale and pre-order
 	if (!$('.ProductList .p-price .SalePrice').length) { // implies exists
 		//console.log('');
 		$('.ProductList .p-price strike').replaceWith('<span class="preorder">Pre-Order</span>');
 	  }
-	
+	*/
 	
 	
 	// Adds sale tag to product page

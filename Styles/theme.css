@@ -993,3 +993,9 @@ top:0;
 .finishorder #share-product{margin-top:20px;}
 .createAccount .PasswordRequirements{height:70px;}
 @media screen and (max-width:768px){.header-logo{width:100%;text-align:center;display:block;} .PageMenu #SideCategoryList{float:none;width:100%;}}@media screen and (max-width:480px){#Header>.inner{width:100%;} .crafted .header-logo{width:100%;text-align:center;display:block;} .PageMenu #SideCategoryList{float:none;width:100%;} .CartContents table,.CartContents thead,.CartContents tfoot,.CartContents tbody,.CartContents th,.CartContents td,.CartContents tr{display:block;} .CartContents tr.Even{border-bottom:1px solid #ccc;} .CartContents tr{overflow:hidden;} .CartContents td{border:none;position:relative;padding-left:50%;} .CartContents td:before{position:absolute;top:6px;left:6px;width:45%;padding-right:10px;white-space:nowrap;} .CartContents .CartItemQuantity{float:left;} .CartContents .CartItemTotalPrice,.CartContents .ProductName,.CartContents .CartItemQuantity{margin:0!important;padding:0!important;} .CartContents .productAttributes td{display:inline;} .CartContents .CartThumb,.CartContents .CartItemIndividualPrice{display:block!important;} .cart .CartCode>.CouponCode,.cart .CartCode>.GiftCertificate{width:100%;} .checkoutExpress #bottom_payment_button{width:100% !important;} .checkout .footer-main .inner{padding:0;} #QuickSearch{display:none!important;}}
+/* Fixes cart word wrap issue */
+.cart .productAttributes {table-layout:fixed}
+.cart .productAttributes  td  {word-wrap:break-word}
+.cart .productAttributes label, .productAttributes span {
+  white-space: normal;
+}
