@@ -969,9 +969,6 @@ STYLE PATCH - Crafted - April 12, 2015
 /* Usp move down*/
 .usp {margin-top: 15px;}
 
-/* Adds intstagram social icon support */
-.footer-main .SocialConnect .icon-instagram:before {content: "\f16d";}
-
 /* main nav font size - adds more horizontal room for text */
 .header .sf-menu a {font-size: 16px!important;}
 
@@ -988,8 +985,13 @@ STYLE PATCH - Crafted - April 12, 2015
 /* after order is complete share order was running over text */
 .finishorder #share-product {margin-top:20px;}
 
-/* password info box overlaps */
-.createAccount .PasswordRequirements {height:70px;}
+/* Moves the password notification box so it doesn't overlap the password input field*/
+.crafted .PasswordRequirements{position:relative;left:175px;}
+.crafted .PasswordRequirementsContent:before{border:10px solid #333;border-bottom-color:transparent;border-top-color:transparent;border-left:0;content:'';left:-10px;position:absolute;top:22px;}
+
+/* Bigcommerce instagram support */
+.icon-instagram:before {content: "\f16d";}
+.is-disabled.icon-instagram{display: none;}
 
 @media screen and (max-width: 768px)  {
 	.header-logo{width:100%;text-align:center;display: block;}
@@ -1005,10 +1007,7 @@ STYLE PATCH - Crafted - April 12, 2015
 	
 	.crafted .header-logo{width:100%;text-align:center;display: block;}
 	
-	.PageMenu #SideCategoryList {
-	  float: none;
-	  width: 100%;
-	}
+	.PageMenu #SideCategoryList {float: none;width: 100%;}
 	
 	/* Adjust checkout table on mobile*/
 	.CartContents table,.CartContents thead,.CartContents tfoot,.CartContents tbody,.CartContents th,.CartContents td,.CartContents tr{display:block;}
