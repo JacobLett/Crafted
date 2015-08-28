@@ -1028,6 +1028,12 @@ STYLE PATCH - Crafted - April 12, 2015
 	
 	/* Hidees quicksearch on Mobile */
 	#QuickSearch {display: none!important;}
+	
+	/* the buttons were overlapping the text on this account order status */
+	.accountOrderStatus .btns {position:static;float:none;width:100%;overflow: hidden;}
+	.accountOrderStatus .btns form {display: inline;float: none;margin-right: 10px;}
+	/* Shows the my account menu item on mobile */
+	#DrawerMenu .TopMenu .First.hide {display: block!important;}
 }
 /* End MOBILE styles */
 
