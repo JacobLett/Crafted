@@ -267,7 +267,7 @@ function jump_to_product_reviews() {
 	if(typeof(HideProductTabs) != 'undefined' && HideProductTabs == 0) {
 		CurrentProdTab = 'ProductReviews_Tab';
 	} else {
-		document.location.href = "#reviews";
+		document.location.href = "#ProductReviews";
 	}
 }
 

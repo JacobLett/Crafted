@@ -959,6 +959,12 @@ STYLE PATCH - Crafted - April 12, 2015
 }
 .category .SubCategoryListGrid .RowDivider {display: none;}
 
+/* corrects ratings overlapping compare button */
+.ProductList .ProductPriceRating {
+    height: auto;
+    min-height: 16px;
+}
+
 /*removes main nav submenu black icon and changes it to a font icon*/
 .crafted .PageMenu li ul li a.hasSub{position:static!important;background:none!important;}
 .crafted .PageMenu li ul li a.hasSub:after{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
